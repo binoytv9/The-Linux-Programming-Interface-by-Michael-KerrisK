@@ -8,10 +8,10 @@
 
 int main(int argc, char *argv[])
 {
-	int inputFd, outputFd, openFlags;
-	mode_t filePerms;
 	ssize_t numRead;
+	mode_t filePerms;
 	char buf[BUF_SIZE];
+	int inputFd, outputFd, openFlags;
 
 	if (argc != 3 || strcmp(argv[1], "--help") == 0)
 		usageErr("%s old-file new-file\n", argv[0]);
