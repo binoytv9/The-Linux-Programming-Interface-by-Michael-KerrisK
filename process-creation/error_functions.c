@@ -1,9 +1,8 @@
 #include <stdarg.h>
 #include "error_functions.h"
 #include "tlpi_hdr.h"
-#include "ename.c.inc"
+#include "ename.c.inc" /* Defines ename and MAX_ENAME */
 
-/* Defines ename and MAX_ENAME */
 #ifdef __GNUC__
 __attribute__ ((__noreturn__))
 #endif
