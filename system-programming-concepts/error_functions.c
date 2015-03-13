@@ -1,9 +1,8 @@
 #include <stdarg.h>
 #include "error_functions.h"
 #include "tlpi_hdr.h"
-#include "ename.c.inc"
+#include "ename.c.inc" /* Defines ename and MAX_ENAME */
 
-/* Defines ename and MAX_ENAME */
 #ifdef __GNUC__
 __attribute__ ((__noreturn__))
 #endif
@@ -35,7 +34,7 @@ static void outputError(Boolean useErr, int err, Boolean flushStdout, const char
 	else
 		snprintf(errText, BUF_SIZE, ":");
 
-	snprintf(buf, BUF_SIZE, "ERROR%s %s\n", errText, userMsg);
+	snprintf(buf, BUF_SIZE, "ERROR%s|| %s\n", errText, userMsg);
 
 	if (flushStdout)
 		fflush(stdout); /* Flush any pending stdout */
